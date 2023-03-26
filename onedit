@@ -1,0 +1,15 @@
+function onEdit(e) {
+  var range = e.range;
+  var sheet = range.getSheet();
+  var row =range.getRow();
+  var column1 = range.getColumn();
+
+  
+  if (column1 >= 1 && column1 <= 2 && sheet.getRange(row,1).getValue() != "" && sheet.getRange(row,2).getValue() != "") {
+    // Realice aquí la acción que desea realizar cuando se cumplan los 3 criterios
+    sheet.getRange(row,5).setValue(new Date)
+ }
+}
+
+
+//Settear Timestamp
