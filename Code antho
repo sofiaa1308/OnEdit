@@ -1,0 +1,33 @@
+/*
+// camposRequeridos :: List[int]
+const camposRequeridos = [5, 6, 7, 8, 9, 10, 11, 12, 13]
+ 
+// siEstaLleno :: string -> boolean
+// predicate siEstaVacio = !siEstaLleno;
+const siEstaLleno = campo => campo.length;
+ 
+// putTimestamp :: Spreadsheet -> Range -> Nil
+const putTimestamp = (sheet, row) => sheet
+  .getRange(row, 19)
+  .setValue(Utilities.formatDate(new Date(), "GMT-5", "dd/MM/yyyy HH:mm:ss"))
+ 
+// findCellValue :: Spreadsheet -> int -> int -> string
+const findCellValue = (sheet, row) => column =>
+  sheet
+    .getRange(row, column)
+    .getValue()
+ 
+// siEstaLlenaLaForma :: Spreadsheet -> int -> boolean
+const siEstaLlenaLaForma = (sheet, row) =>
+  camposRequeridos
+    .map(findCellValue(sheet, row))
+    .every(siEstaLleno);
+ 
+// onEdit :: Event -> Nil
+// Event :: { oldValue: string, source: Spreadsheet, range: Range }
+const onEdit = event => {
+  const sheet = event.source
+  const row = 324
+  if (siEstaLlenaLaForma(sheet, row))
+    putTimestamp(sheet, row);
+}*/
